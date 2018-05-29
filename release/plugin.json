@@ -3,7 +3,7 @@
     "id": "org.openwalletstack.wallet.plugin.applet.hello",
     "kind": "applet",
     "name": "Hello",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "An OWS Wallet minimal plugin.",
     "author": "Open Wallet Stack",
     "url": {
