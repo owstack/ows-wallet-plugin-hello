@@ -1,6 +1,6 @@
 {
   "name": "@owstack/ows-wallet-plugin-hello",
-  "title": "Starter",
+  "title": "Hello",
   "version": "0.0.1",
   "description": "An OWS Wallet minimal plugin.",
   "author": "Open Wallet Stack",

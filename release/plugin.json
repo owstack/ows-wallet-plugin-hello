@@ -2,7 +2,7 @@
   "header": {
     "id": "org.openwalletstack.wallet.plugin.applet.hello",
     "kind": "applet",
-    "name": "Starter",
+    "name": "Hello",
     "version": "0.0.1",
     "description": "An OWS Wallet minimal plugin.",
     "author": "Open Wallet Stack",

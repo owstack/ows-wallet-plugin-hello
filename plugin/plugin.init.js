@@ -7,20 +7,10 @@ angular.module('owsWalletPlugin').config(function($stateProvider) {
       url: '/home',
 	    controller: 'HomeCtrl',
 	    templateUrl: 'views/home/home.html'
-    })
-    .state('settings', {
-      url: '/settings',
-      controller: 'SettingsCtrl',
-      templateUrl: 'views/settings/settings.html'
-    })
-    .state('sessionLog', {
-      url: '/session-log',
-      controller: 'SessionLogCtrl',
-      templateUrl: 'views/settings/session-log/session-log.html'
     });
 
 })
-.run(function($rootScope, $state, $log, starterService) {
+.run(function($rootScope, $state, $log) {
 
   owswallet.Plugin.ready(function() {
 
