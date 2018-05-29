@@ -21,7 +21,7 @@
     "url": "https://github.com/owstack/ows-wallet-plugin-hello/issues"
   },
   "dependencies": {
-    "@owstack/ows-wallet-plugin-client": "^0.0.33"
+    "@owstack/ows-wallet-plugin-client": "^0.0.34"
   },
   "scripts": {
     "start": "npm run build:www && ionic serve --no-livereload --nogulp -s --address 0.0.0.0",

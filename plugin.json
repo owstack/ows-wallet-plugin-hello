@@ -13,7 +13,7 @@
       "terms": "https://openwalletstack.org/terms",
       "git": "https://github.com/owstack/ows-wallet-plugin-hello/"
     },
-    "commitHash": "6ddc702"
+    "commitHash": "8407dff"
   },
   "permissions": {
     "delete": false
