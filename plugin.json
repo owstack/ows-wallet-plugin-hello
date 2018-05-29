@@ -10,8 +10,10 @@
       "marketing": "https://openwalletstack.org",
       "support": "https://github.com/owstack/ows-wallet-plugin-hello/issues",
       "privacy": "https://openwalletstack.org/disclaimer",
-      "terms": "https://openwalletstack.org/terms"
-    }
+      "terms": "https://openwalletstack.org/terms",
+      "git": "https://github.com/owstack/ows-wallet-plugin-hello/"
+    },
+    "commitHash": "6ddc702"
   },
   "permissions": {
     "delete": false
