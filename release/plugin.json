@@ -3,12 +3,12 @@
     "id": "org.openwalletstack.wallet.plugin.applet.hello",
     "kind": "applet",
     "name": "Hello",
-    "version": "0.0.4",
-    "description": "An OWS Wallet minimal plugin.",
+    "version": "0.0.5",
+    "description": "An OWS Wallet minimal applet plugin.",
     "author": "Open Wallet Stack",
     "url": {
       "marketing": "https://openwalletstack.org",
-      "support": "https://github.com/owstack/ows-wallet-plugin-starter/issues",
+      "support": "https://github.com/owstack/ows-wallet-plugin-hello/issues",
       "privacy": "https://openwalletstack.org/disclaimer",
       "terms": "https://openwalletstack.org/terms"
     }

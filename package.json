@@ -1,8 +1,8 @@
 {
   "name": "@owstack/ows-wallet-plugin-hello",
   "title": "Hello",
-  "version": "0.0.4",
-  "description": "An OWS Wallet minimal plugin.",
+  "version": "0.0.5",
+  "description": "An OWS Wallet minimal applet plugin.",
   "author": "Open Wallet Stack",
   "keywords": [
     "ows",
@@ -14,14 +14,14 @@
   "homepage": "https://openwalletstack.org",
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/owstack/ows-wallet-plugin-starter.git",
+    "url": "git://github.com/owstack/ows-wallet-plugin-hello.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/owstack/ows-wallet-plugin-starter/issues"
+    "url": "https://github.com/owstack/ows-wallet-plugin-hello/issues"
   },
   "dependencies": {
-    "@owstack/ows-wallet-plugin-client": "^0.0.32"
+    "@owstack/ows-wallet-plugin-client": "^0.0.33"
   },
   "scripts": {
     "start": "npm run build:www && ionic serve --no-livereload --nogulp -s --address 0.0.0.0",
