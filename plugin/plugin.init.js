@@ -10,11 +10,13 @@ angular.module('owsWalletPlugin').config(function($stateProvider) {
     });
 
 })
-.run(function($rootScope, $state, $log) {
+.run(function($rootScope, $state, $log, helloService) {
 
   owswallet.Plugin.ready(function() {
 
-    $state.go('home');
+    helloService.init(function() {
+      $state.go('home');
+    });
 
   });
 
