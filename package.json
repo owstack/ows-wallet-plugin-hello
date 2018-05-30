@@ -1,7 +1,7 @@
 {
-  "name": "@owstack/ows-wallet-plugin-hello",
+  "name": "@owstack/ows-wallet-applet-hello",
   "title": "Hello",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An OWS Wallet minimal applet plugin.",
   "author": "Open Wallet Stack",
   "keywords": [
@@ -14,11 +14,11 @@
   "homepage": "https://openwalletstack.org",
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/owstack/ows-wallet-plugin-hello.git",
+    "url": "git://github.com/owstack/ows-wallet-applet-hello.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/owstack/ows-wallet-plugin-hello/issues"
+    "url": "https://github.com/owstack/ows-wallet-applet-hello/issues"
   },
   "dependencies": {
     "@owstack/ows-wallet-plugin-client": "^0.0.34"
