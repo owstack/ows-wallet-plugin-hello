@@ -35,6 +35,7 @@ angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($s
   // }
   //
 
+  // Create a Hello servlet instance.
   var hello = new Hello('helloConfig');
 
   $scope.$on("$ionicView.beforeEnter", function(event, data) {
@@ -47,7 +48,8 @@ angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($s
 			// Call the Hello servlet and process the reponse.
 			hello.say('Hello, World!').then(function(response) {
 
-				$scope.respone = response;
+				$scope.result = response.data;
+				$scope.$apply();
 
 			}).catch(function(error) {
 				// Something bad happened.
