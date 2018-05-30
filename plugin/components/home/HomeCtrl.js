@@ -41,14 +41,19 @@ angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($s
   	// Set a view title.
 		$scope.title = Session.getInstance().plugin.header.name;
 
-		// Call the Hello servlet and process the reponse.
-		hello.say('Hello, World!').then(function(response) {
+		// Wait for the Hello servlet to become ready before sending any messages.
+		owswallet.Plugin.openForBusiness(Hello.pluginId, function() {
 
-			$scope.respone = response;
+			// Call the Hello servlet and process the reponse.
+			hello.say('Hello, World!').then(function(response) {
 
-		}).catch(function(error) {
-			// Something bad happened.
-			$log.error(error);
+				$scope.respone = response;
+
+			}).catch(function(error) {
+				// Something bad happened.
+				$log.error(error);
+
+			});
 
 		});
   });
