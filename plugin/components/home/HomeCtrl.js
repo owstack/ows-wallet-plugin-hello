@@ -1,6 +1,9 @@
 'use strict';
 
-angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($scope, $log, Hello, HelloServlet, Session) {
+angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($scope, $log,
+  /* @namespace owsWalletPlugin.api.hello */ Hello,
+  /* @namespace owsWalletPlugin.api.hello */ HelloServlet,
+  /* @namespace owsWalletPluginClient.api */ Session) {
 
 	// Create an API object passing in a dependency configuration ID. The dependency configuration is defined in the applet's plugin.json.
 	// Dependency configuration is used for providing the servlet with any necessary configuration data it requires to provide its service.
@@ -48,7 +51,7 @@ angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($s
 			// Call the Hello servlet and process the reponse.
 			hello.say('Hello, World!').then(function(response) {
 
-				$scope.result = response.data;
+				$scope.result = response;
 				$scope.$apply();
 
 			}).catch(function(error) {
