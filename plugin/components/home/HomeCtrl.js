@@ -39,7 +39,7 @@ angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($s
   //
 
   // Create a Hello servlet instance.
-  var hello = new Hello('helloConfig');
+  var hello = new Hello();
 
   $scope.$on("$ionicView.beforeEnter", function(event, data) {
   	// Set a view title.
