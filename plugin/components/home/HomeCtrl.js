@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($scope, $log,
+angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($scope,
   /* @namespace owsWalletPlugin.api.hello */ Hello,
   /* @namespace owsWalletPlugin.api.hello */ HelloServlet,
   /* @namespace owsWalletPluginClient.api */ Session) {
@@ -55,8 +55,7 @@ angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($s
 				$scope.$apply();
 
 			}).catch(function(error) {
-				// Something bad happened.
-				$log.error(error);
+				// Error logged
 
 			});
 
