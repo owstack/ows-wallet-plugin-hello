@@ -13,7 +13,7 @@
       "terms": "https://openwalletstack.org/terms",
       "git": "https://github.com/owstack/ows-wallet-applet-hello/"
     },
-    "commitHash": "f15435b"
+    "commitHash": "930c99e"
   },
   "permissions": {
     "delete": false
@@ -27,6 +27,7 @@
       "entrance": "zoomIn"
     },
     "splash": {
+      "enabled": false,
       "image": "img/splash.png",
       "autoHide": true,
       "delay": 500
