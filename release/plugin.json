@@ -13,11 +13,12 @@
       "terms": "https://openwalletstack.org/terms",
       "git": "https://github.com/owstack/ows-wallet-applet-hello/"
     },
-    "commitHash": "ef6a549"
+    "commitHash": "f15435b"
   },
   "permissions": {
     "delete": false
   },
+  "linkHostCss": false,
   "galleryImage": "img/gallery.png",
   "previewImage": "img/preview.png",
   "iconImage": "img/icon.png",
