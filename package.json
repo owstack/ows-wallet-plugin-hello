@@ -1,7 +1,7 @@
 {
   "name": "@owstack/ows-wallet-applet-hello",
   "title": "Hello",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "An OWS Wallet minimal applet plugin.",
   "author": "Open Wallet Stack",
   "keywords": [
