@@ -41,25 +41,21 @@ angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', function($s
   // Create a Hello servlet instance.
   var hello = new Hello();
 
+	// Wait for the Hello servlet to become ready before sending any messages.
+	owswallet.Plugin.openForBusiness(HelloServlet.id, function() {
+		// Call the Hello servlet and process the reponse.
+		hello.say('Hello, World!').then(function(response) {
+			$scope.result = response;
+			$scope.$apply();
+
+		}).catch(function(error) {
+			// Error logged
+		});
+	});
+
   $scope.$on("$ionicView.beforeEnter", function(event, data) {
   	// Set a view title.
 		$scope.title = Session.getInstance().plugin.header.name;
-
-		// Wait for the Hello servlet to become ready before sending any messages.
-		owswallet.Plugin.openForBusiness(HelloServlet.id, function() {
-
-			// Call the Hello servlet and process the reponse.
-			hello.say('Hello, World!').then(function(response) {
-
-				$scope.result = response;
-				$scope.$apply();
-
-			}).catch(function(error) {
-				// Error logged
-
-			});
-
-		});
   });
 
 });
