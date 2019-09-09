@@ -2,6 +2,7 @@
 
 module.exports = function(grunt) {
 
+  const sass = require('node-sass');
   require('load-grunt-tasks')(grunt);
 
   // Project Configuration
@@ -37,6 +38,9 @@ module.exports = function(grunt) {
       }
     },
     sass: {
+      options: {
+        implementation: sass
+      },
       // Plugin base css; one css file for plugin
       plugin: {
         options: {
@@ -75,6 +79,10 @@ module.exports = function(grunt) {
         sourceMap: false,
         sourceMapStyle: 'link' // embed, link, inline
       },
+      lib_js: {
+        src: [],
+        dest: 'www/lib/components.js'
+      },
       plugin_js: {
         src: [
           'plugin/plugin.js',
@@ -96,17 +104,6 @@ module.exports = function(grunt) {
           'plugin/api/public/**/*.js'
         ],
         dest: 'api/api.js'
-      },
-    },
-    ngAnnotate: {
-      options: {
-        singleQuotes: true
-      },
-      api: {
-        files: {
-          'www/js/plugin.js': 'www/js/plugin.js',
-          'api/api.js': 'api/api.js'
-        },
       },
     },
     nggettext_extract: {
@@ -169,6 +166,13 @@ module.exports = function(grunt) {
         src: '**/*',
         dest: 'www/img/'
       },
+      plugin_resources: {
+        expand: true,
+        flatten: false,
+        cwd: 'plugin/assets',
+        src: ['android/**/*', 'ios/**/*', 'linux/**/*', 'mac/**/*'],
+        dest: 'resources/'
+      },
       plugin_fonts: {
         expand: true,
         flatten: false,
@@ -198,6 +202,7 @@ module.exports = function(grunt) {
         cwd: '',
         src: [
           'api/**/*',
+          'resources/**/*',
           'www/**/*',
           'plugin.json'
         ],
@@ -221,15 +226,16 @@ module.exports = function(grunt) {
     'clean:api',
     'clean:www',
     'sass',
+    'concat:lib_js',
     'concat:plugin_js',
     'concat:plugin_api_js',
     'concat:plugin_css',
-    'ngAnnotate',
     'exec:build',
     'copy:plugin_index',
     'copy:plugin_views',
     'copy:plugin_shared',
     'copy:plugin_imgs',
+    'copy:plugin_resources',
     'copy:plugin_fonts',
     'copy:plugin_skins',
     'copy:ionic_fonts',

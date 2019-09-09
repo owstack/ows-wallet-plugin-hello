@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('owsWalletPlugin').config(function($stateProvider) {
+angular.module('owsWalletPlugin').config([
+  '$stateProvider',
+function($stateProvider) {
 
 	$stateProvider
     .state('home', {
@@ -9,8 +11,12 @@ angular.module('owsWalletPlugin').config(function($stateProvider) {
 	    templateUrl: 'views/home/home.html'
     });
 
-})
-.run(function($rootScope, $log, $state) {
+}])
+.run([
+  '$rootScope',
+  '$log',
+  '$state',
+function($rootScope, $log, $state) {
 
   owswallet.Plugin.ready(function() {
     $state.go('home');
@@ -20,4 +26,4 @@ angular.module('owsWalletPlugin').config(function($stateProvider) {
     $log.debug('Applet route change start from:', fromState.name || '-', ' to:', toState.name);
   });
 
-});
+}]);
