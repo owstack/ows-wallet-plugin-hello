@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('owsWalletPlugin.controllers').controller('HomeCtrl', [
+	'$scope',
 	'owsWalletPlugin.api.hello.Hello',
 	'owsWalletPlugin.api.hello.HelloServlet',
 	'owsWalletPluginClient.api.Session',
